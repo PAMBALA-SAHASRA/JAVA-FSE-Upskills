@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap with JS Plugins</title>
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+</head>
+<body>
+
+  <div class="container mt-5">
+    <h1 class="text-info">Bootstrap JS Plugins Enabled</h1>
+    
+    <!-- Example: Tooltip -->
+    <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" title="Tooltip is working!">
+      Hover for tooltip
+    </button>
+  </div>
+
+  <!-- Bootstrap Bundle JS (includes Popper) -->
+  <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Activate tooltips -->
+  <script>
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+    const tooltipList = [...tooltipTriggerList].map(el => new bootstrap.Tooltip(el));
+  </script>
+
+</body>
+</html>

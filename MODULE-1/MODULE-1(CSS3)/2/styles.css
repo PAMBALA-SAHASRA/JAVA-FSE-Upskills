@@ -1,0 +1,63 @@
+/* ----------------------------------------
+   Style for main CTA (Call to Action) Button
+---------------------------------------- */
+.cta-container {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.cta-button {
+  background-color: #007BFF;
+  color: white;
+  font-size: 1.1rem;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #0056b3;
+}
+
+/* ----------------------------------------
+   Event Listings Section
+---------------------------------------- */
+.events {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.events h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+/* ----------------------------------------
+   Style for each event card
+---------------------------------------- */
+.event-card {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  border-left: 6px solid #007BFF;
+}
+
+.event-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  color: #2c3e50;
+}
+
+.event-card p {
+  font-size: 1rem;
+  color: #555;
+}

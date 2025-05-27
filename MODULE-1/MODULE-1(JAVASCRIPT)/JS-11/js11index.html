@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Community Event Registration</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f1f5f9;
+      padding: 30px;
+    }
+    h1 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+    form {
+      max-width: 500px;
+      margin: 0 auto;
+      background: #ffffff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+    input, select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #d1d5db;
+      border-radius: 5px;
+    }
+    .error {
+      color: red;
+      font-size: 0.9rem;
+      margin-top: 5px;
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #2563eb;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    #successMsg {
+      margin-top: 15px;
+      text-align: center;
+      color: green;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Event Registration</h1>
+
+<form id="registrationForm">
+  <label for="name">Full Name</label>
+  <input type="text" name="name" id="name" />
+  <div class="error" id="nameError"></div>
+
+  <label for="email">Email Address</label>
+  <input type="email" name="email" id="email" />
+  <div class="error" id="emailError"></div>
+
+  <label for="event">Select Event</label>
+  <select name="event" id="event">
+    <option value="">-- Select an event --</option>
+    <option value="Yoga Session">Yoga Session</option>
+    <option value="Music Gala">Music Gala</option>
+    <option value="Art Picnic">Art Picnic</option>
+    <option value="Tech Bootcamp">Tech Bootcamp</option>
+  </select>
+  <div class="error" id="eventError"></div>
+
+  <button type="submit">Register</button>
+  <div id="successMsg"></div>
+</form>
+
+<script src="form.js"></script>
+</body>
+</html>

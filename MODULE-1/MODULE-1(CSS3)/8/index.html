@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Box Model & Layout Demo</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="container">
+    <h2>Community Event Cards</h2>
+
+    <div class="eventCard">
+      <h3>Art Walk</h3>
+      <p>Explore local galleries and street art.</p>
+    </div>
+
+    <div class="eventCard">
+      <h3>Food Truck Fiesta</h3>
+      <p>Try diverse cuisine and enjoy music!</p>
+    </div>
+
+    <form class="rsvp-form">
+      <h3>RSVP Now</h3>
+      <label for="name">Name:</label>
+      <input type="text" id="name" placeholder="Your Name" />
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" placeholder="Your Email" />
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <div class="visibility-box">
+      <p class="hidden-example">This uses <strong>visibility: hidden</strong> (space remains)</p>
+      <p class="none-example">This uses <strong>display: none</strong> (no space)</p>
+    </div>
+  </div>
+</body>
+</html>

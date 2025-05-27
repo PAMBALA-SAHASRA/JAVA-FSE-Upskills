@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Nearby Events - Geolocation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    header {
+      background-color: #2a9d8f;
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #264653;
+      padding: 15px 0;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.1rem;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: #e9c46a;
+    }
+
+    section {
+      max-width: 800px;
+      margin: 40px auto;
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    }
+
+    h2 {
+      color: #2a9d8f;
+      font-size: 1.8rem;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    button {
+      display: block;
+      margin: 20px auto;
+      padding: 12px 24px;
+      font-size: 1rem;
+      border-radius: 8px;
+      border: none;
+      background-color: #2a9d8f;
+      color: white;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #1f776d;
+    }
+
+    #output {
+      text-align: center;
+      font-size: 1rem;
+      margin-top: 20px;
+      color: #333;
+    }
+
+    footer {
+      text-align: center;
+      background: #264653;
+      color: white;
+      padding: 20px;
+      margin-top: 50px;
+      font-size: 0.95rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Find Nearby Community Events</h1>
+    <p>Use your location to discover events close to you</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#events">Events</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section id="home">
+    <h2>Locate Events Near You</h2>
+    <button onclick="findLocation()">📍 Find Nearby Events</button>
+    <div id="output">Your coordinates will appear here.</div>
+  </section>
+
+  <section id="events">
+    <h2>Upcoming Highlights</h2>
+    <ul>
+      <li>🍴 Food Festival – June 10</li>
+      <li>🎶 Music Concert – June 18</li>
+      <li>🏆 Sports Day – June 24</li>
+      <li>🎨 Kids Activities – July 1</li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p><strong>Email:</strong> contact@localcommunity.org</p>
+    <p><strong>Phone:</strong> +1 (800) 123-4567</p>
+  </section>
+
+  <footer>
+    &copy; 2025 Local City Council. All rights reserved.
+  </footer>
+
+  <script>
+    function findLocation() {
+      const output = document.getElementById('output');
+
+      if (!navigator.geolocation) {
+        output.textContent = "Geolocation is not supported by your browser.";
+        return;
+      }
+
+      output.textContent = "Locating…";
+
+      navigator.geolocation.getCurrentPosition(success, error, {
+        enableHighAccuracy: true,
+        timeout: 10000,
+        maximumAge: 0
+      });
+
+      function success(position) {
+        const lat = position.coords.latitude.toFixed(6);
+        const lon = position.coords.longitude.toFixed(6);
+        output.innerHTML = `<strong>Latitude:</strong> ${lat}<br><strong>Longitude:</strong> ${lon}<br><br>🎉 We are showing events near you!`;
+      }
+
+      function error(err) {
+        switch(err.code) {
+          case err.PERMISSION_DENIED:
+            output.textContent = "❌ Permission to access location was denied.";
+            break;
+          case err.TIMEOUT:
+            output.textContent = "⚠️ Location request timed out.";
+            break;
+          case err.POSITION_UNAVAILABLE:
+            output.textContent = "🚫 Location information is unavailable.";
+            break;
+          default:
+            output.textContent = "❗ An unknown error occurred.";
+        }
+      }
+    }
+  </script>
+
+</body>
+</html>

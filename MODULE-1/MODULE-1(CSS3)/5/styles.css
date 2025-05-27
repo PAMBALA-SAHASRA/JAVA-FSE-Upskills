@@ -1,0 +1,98 @@
+/* ----------------------------------------
+   Google Fonts Applied
+   Montserrat - Bold for headers
+   Open Sans - For body and descriptions
+---------------------------------------- */
+
+/* Reset margin/padding and box-sizing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styling with font family and base size */
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #f7f9fc;
+  color: #222;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+/* ----------------------------------------
+   Header styles
+---------------------------------------- */
+#mainHeader {
+  text-align: center;
+  margin-top: 40px;
+}
+
+
+#mainHeader h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom: 10px;
+  color: #2c3e50;
+}
+
+
+.subtitle {
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1.25rem;
+  color: #555;
+  letter-spacing: 1px;
+}
+
+.eventsSection h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 2.5rem;
+  text-align: center;
+  color: #1a73e8;
+  margin: 50px 0 25px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.eventCard {
+  background-color: #ffffff;
+  max-width: 700px;
+  margin: 20px auto;
+  padding: 25px 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.eventCard h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+  color: #333;
+  letter-spacing: 1px;
+}
+
+
+.description {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #666;
+  text-align: justify;
+  text-transform: none;
+  letter-spacing: 0.5px;
+}
+
+
+footer {
+  text-align: center;
+  padding: 20px 0;
+  color: #999;
+  font-size: 0.9rem;
+  margin-top: 50px;
+}

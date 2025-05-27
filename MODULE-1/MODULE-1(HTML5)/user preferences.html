@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Community Events - Preferences</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    header {
+      background-color: #2a9d8f;
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #264653;
+      padding: 15px 0;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.1rem;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: #e9c46a;
+    }
+
+    section {
+      max-width: 800px;
+      margin: 40px auto;
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    }
+
+    h2 {
+      color: #2a9d8f;
+      font-size: 1.8rem;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    label {
+      font-size: 1rem;
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    select, button {
+      width: 100%;
+      padding: 12px;
+      font-size: 1rem;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      background-color: #2a9d8f;
+      color: white;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #1f776d;
+    }
+
+    video {
+      width: 100%;
+      max-width: 720px;
+      margin: 20px auto;
+      display: block;
+      border-radius: 12px;
+      border: 4px solid #ccc;
+    }
+
+    #videoMessage {
+      text-align: center;
+      color: #2e7d32;
+      font-weight: bold;
+      font-size: 1rem;
+    }
+
+    footer {
+      text-align: center;
+      background: #264653;
+      color: white;
+      padding: 20px;
+      margin-top: 50px;
+      font-size: 0.95rem;
+    }
+  </style>
+</head>
+<body onbeforeunload="return 'Changes you made may not be saved.'">
+
+  <header>
+    <h1>Welcome to Your Community Events Portal</h1>
+    <p>Choose and save your preferences for a better experience</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#events">Events</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section id="home">
+    <h2>Select Your Preferred Event Type</h2>
+    <form id="preferenceForm">
+      <label for="eventType">Event Type:</label>
+      <select id="eventType" onchange="savePreference()" required>
+        <option value="">-- Select Event Type --</option>
+        <option value="Food Festival">Food Festival</option>
+        <option value="Music Concert">Music Concert</option>
+        <option value="Sports Day">Sports Day</option>
+        <option value="Kids Activities">Kids Activities</option>
+      </select>
+      <button type="button" onclick="clearPreferences()">Clear Preferences</button>
+    </form>
+  </section>
+
+  <section id="events">
+    <h2>Event Promo Video</h2>
+    <video id="promoVideo" controls oncanplay="videoReadyMessage()">
+      <source src="community-events.mp4" type="video/mp4">
+      Your browser does not support HTML5 video.
+    </video>
+    <div id="videoMessage"></div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact the Organizers</h2>
+    <p><strong>Email:</strong> contact@localcommunity.org</p>
+    <p><strong>Phone:</strong> +1 (800) 123-4567</p>
+  </section>
+
+  <footer>
+    &copy; 2025 Local City Council. All Rights Reserved.
+  </footer>
+
+  <script>
+    function savePreference() {
+      const eventType = document.getElementById("eventType").value;
+      if (eventType) {
+        localStorage.setItem("preferredEvent", eventType);
+      }
+    }
+
+    function clearPreferences() {
+      localStorage.clear();
+      sessionStorage.clear();
+      document.getElementById("eventType").selectedIndex = 0;
+      alert("Your preferences have been cleared.");
+    }
+
+    function videoReadyMessage() {
+      document.getElementById("videoMessage").textContent = "🎬 Video ready to play! Explore our upcoming events!";
+    }
+
+    window.onload = function () {
+      const saved = localStorage.getItem("preferredEvent");
+      if (saved) {
+        const select = document.getElementById("eventType");
+        for (let i = 0; i < select.options.length; i++) {
+          if (select.options[i].value === saved) {
+            select.selectedIndex = i;
+            break;
+          }
+        }
+      }
+    };
+  </script>
+
+</body>
+</html>

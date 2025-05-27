@@ -1,0 +1,71 @@
+/* Base body styles with background and font */
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #f0f4f8;
+  color: #222;
+  min-height: 100vh;
+  margin: 40px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* Container to center content and add white background */
+.container {
+  max-width: 900px;
+  width: 100%;
+  background-color: white;
+  padding: 40px 50px;
+  border-radius: 15px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+}
+
+/* Section heading */
+h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 2.5rem;
+  text-align: center;
+  color: #1a73e8;
+  margin-bottom: 35px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* Table base styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+  font-size: 1rem;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* Table header */
+th {
+  background-color: #1a73e8;
+  color: white;
+  padding: 12px 15px;
+  font-weight: 700;
+}
+
+/* Table cells */
+td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  color: #333;
+}
+
+/* Zebra striping for even rows */
+tbody tr:nth-child(even) {
+  background-color: #f3f6fc;
+}
+
+/* Hover effect */
+tbody tr:hover {
+  background-color: #dbe9ff;
+  cursor: pointer;
+}

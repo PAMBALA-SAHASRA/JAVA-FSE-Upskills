@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Community Events - Arrays and Methods</title>
+<style>
+  body {
+    background-color: #e3f2fd;
+    font-family: 'Arial', sans-serif;
+    margin: 0; padding: 20px;
+    color: #0d47a1;
+  }
+  header {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    font-style: italic;
+    margin-bottom: 25px;
+  }
+  #addEventForm {
+    max-width: 400px;
+    margin: 0 auto 25px;
+    background-color: white;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(13,71,161,0.3);
+  }
+  #addEventForm input, #addEventForm select, #addEventForm button {
+    width: 100%;
+    font-size: 1rem;
+    padding: 8px 10px;
+    margin: 8px 0;
+    border-radius: 5px;
+    border: 1px solid #0d47a1;
+  }
+  #addEventForm button {
+    background-color: #0d47a1;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  #addEventForm button:hover {
+    background-color: #08306b;
+  }
+  #musicEvents {
+    max-width: 700px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+    gap: 15px;
+  }
+  .eventCard {
+    background-color: white;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(13,71,161,0.3);
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #0d47a1;
+    text-align: center;
+  }
+  .noMusicMsg {
+    text-align: center;
+    font-size: 1.3rem;
+    font-style: italic;
+    color: #555;
+  }
+</style>
+</head>
+<body>
+
+<header>Community Events - Arrays & Methods</header>
+
+<div id="addEventForm">
+  <input type="text" id="eventName" placeholder="Event Name (e.g., Workshop on Baking)" />
+  <input type="date" id="eventDate" />
+  <select id="eventCategory">
+    <option value="Music">Music</option>
+    <option value="Workshop">Workshop</option>
+    <option value="Festival">Festival</option>
+    <option value="Picnic">Picnic</option>
+  </select>
+  <button id="addEventBtn">Add Event</button>
+</div>
+
+<h2 style="text-align:center; margin-bottom: 15px;">Music Events</h2>
+<div id="musicEvents">
+  <!-- Music event cards will appear here -->
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>

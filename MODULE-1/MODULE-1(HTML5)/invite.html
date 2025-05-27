@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Event Registration Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to bottom, #f0f4f7, #dce3e8);
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #002b5c;
+      color: white;
+      padding: 20px 40px;
+      text-align: center;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #004080;
+    }
+
+    nav a {
+      color: white;
+      padding: 14px 20px;
+      text-decoration: none;
+      font-size: 16px;
+    }
+
+    nav a:hover {
+      background-color: #0059b3;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 30px auto;
+      background-color: #fff;
+      padding: 30px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      border-radius: 8px;
+    }
+
+    .video-section {
+      text-align: center;
+    }
+
+    .video-message {
+      font-size: 18px;
+      margin-bottom: 10px;
+      color: green;
+      display: none;
+    }
+
+    video {
+      width: 100%;
+      max-width: 720px;
+      border: 2px solid #ccc;
+      border-radius: 5px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #002b5c;
+      color: white;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body onbeforeunload="return confirmLeave()">
+
+  <header>
+    <h1>Professional Event Portal</h1>
+    <p>Your gateway to upcoming events and registrations</p>
+  </header>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#events">Events</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div class="container" id="events">
+    <h2>Video Invite</h2>
+    <div class="video-section">
+      <p class="video-message" id="videoMsg">Video ready to play</p>
+      <video id="eventVideo" controls oncanplay="showMessage()">
+        <source src="your-video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
+
+  <div class="container" id="contact">
+    <h2>Contact Us</h2>
+    <p>Email: info@eventportal.com</p>
+    <p>Phone: +1 234 567 8900</p>
+  </div>
+
+  <footer>
+    &copy; 2025 Event Registration. All rights reserved.
+  </footer>
+
+  <script>
+    function showMessage() {
+      document.getElementById("videoMsg").style.display = "block";
+    }
+
+    function confirmLeave() {
+      return "Are you sure you want to leave this page? Changes you made may not be saved.";
+    }
+  </script>
+</body>
+</html>

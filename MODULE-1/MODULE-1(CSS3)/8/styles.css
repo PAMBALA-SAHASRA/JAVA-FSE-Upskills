@@ -1,0 +1,86 @@
+/* Base setup */
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #f2f6fa;
+  margin: 40px;
+  color: #222;
+}
+
+/* Center container */
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading */
+h2 {
+  text-align: center;
+  color: #1a73e8;
+  margin-bottom: 30px;
+}
+
+/* Event Card box model */
+.eventCard {
+  border: 2px solid #1a73e8;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  background-color: #e8f0fe;
+}
+
+/* RSVP form */
+.rsvp-form {
+  margin-top: 40px;
+  padding: 20px;
+  border: 2px dashed #aaa;
+  border-radius: 10px;
+}
+
+.rsvp-form input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-top: 8px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.rsvp-form input:focus {
+  outline: 2px solid #1a73e8;
+  border-color: #1a73e8;
+}
+
+.rsvp-form button {
+  padding: 10px 20px;
+  background-color: #1a73e8;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.rsvp-form button:hover {
+  background-color: #155fc0;
+}
+
+/* Visibility section */
+.visibility-box {
+  margin-top: 50px;
+  padding: 20px;
+  background-color: #fef3c7;
+  border: 1px solid #fbbf24;
+  border-radius: 8px;
+}
+
+.hidden-example {
+  visibility: hidden;
+}
+
+.none-example {
+  display: none;
+}

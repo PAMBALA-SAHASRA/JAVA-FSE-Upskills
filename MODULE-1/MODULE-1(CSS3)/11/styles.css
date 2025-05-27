@@ -1,0 +1,52 @@
+/* Reset default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background: #f4f4f4;
+  color: #333;
+}
+
+header, footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+.container {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+/* Main and sidebar layout */
+main {
+  flex: 3;
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+aside {
+  flex: 1;
+  background: #e2e2e2;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  aside {
+    order: -1;
+  }
+}

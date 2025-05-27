@@ -1,0 +1,57 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  background-color: #f9f9f9;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding-bottom: 50px;
+}
+
+
+#mainHeader {
+  background-color: #007BFF;
+  color: white;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+
+h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin: 40px 0 20px;
+  color: #333;
+}
+
+
+.eventCard {
+  background-color: white;
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border-left: 6px solid #007BFF;
+}
+
+
+.eventCard h3,
+.eventCard p {
+  margin-bottom: 10px;
+  color: #444;
+}
+
+
+.eventCard h3 {
+  font-size: 1.4rem;
+}
+
+.eventCard p {
+  font-size: 1rem;
+  line-height: 1.5;
+}

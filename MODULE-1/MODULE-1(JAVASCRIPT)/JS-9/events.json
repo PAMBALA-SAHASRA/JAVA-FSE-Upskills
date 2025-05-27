@@ -1,0 +1,6 @@
+[
+  { "name": "Yoga in Park", "date": "2025-06-10", "category": "Wellness", "seats": 10, "registered": 2 },
+  { "name": "Coding Bootcamp", "date": "2025-06-15", "category": "Workshop", "seats": 5, "registered": 1 },
+  { "name": "Live Music Night", "date": "2025-06-20", "category": "Music", "seats": 8, "registered": 0 },
+  { "name": "Art Picnic", "date": "2025-06-25", "category": "Picnic", "seats": 0, "registered": 5 }
+]

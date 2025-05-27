@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Reorder Columns</title>
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+  <style>
+    .box {
+      padding: 20px;
+      text-align: center;
+      background-color: #e2e3e5;
+      border: 1px solid #ccc;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container mt-4">
+    <div class="row">
+      <div class="col-md-6 order-md-2">
+        <div class="box">Column 1 (Second on md and up)</div>
+      </div>
+      <div class="col-md-6 order-md-1">
+        <div class="box">Column 2 (First on md and up)</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

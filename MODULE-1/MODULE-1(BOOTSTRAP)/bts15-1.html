@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Image Borders</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    body {
+      background-color: #f0f2f5;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin: 2rem 0;
+      font-weight: bold;
+      color: #333;
+    }
+    .img-box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+    }
+    .profile-img {
+      width: 220px;
+      height: 220px;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Image with Border & Rounded Circle</h2>
+
+  <div class="container img-box">
+    <img 
+      src="https://images.unsplash.com/photo-1502767089025-6572583495b0?auto=format&fit=crop&w=220&q=80" 
+      class="profile-img border border-primary border-3 rounded-circle shadow"
+      alt="Sample Profile Image" />
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

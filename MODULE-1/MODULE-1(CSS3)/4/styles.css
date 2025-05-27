@@ -1,0 +1,95 @@
+
+body {
+ 
+  background-color: #003366; 
+
+ 
+  background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1350&q=80');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  color: rgba(255, 255, 255, 0.9); /* Slightly transparent white text */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0 20px 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+#mainHeader {
+  margin-top: 40px;
+  text-align: center;
+  max-width: 900px;
+  width: 100%;
+}
+
+
+#mainHeader h1 {
+  font-size: 3rem;
+  background: linear-gradient(90deg, #00b4db, #0083b0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 10px;
+}
+
+#mainHeader p {
+  font-size: 1.25rem;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+
+.eventsSection h2 {
+  font-size: 2.5rem;
+  max-width: 900px;
+  width: 100%;
+  margin: 50px auto 30px;
+  padding: 10px 0;
+  text-align: center;
+
+  
+  background: linear-gradient(90deg, #00b4db, #0083b0);
+  color: white;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+
+.eventCard {
+  background-color: rgba(0, 51, 102, 0.75); /* Navy blue with transparency */
+  max-width: 900px;
+  margin: 15px auto;
+  padding: 25px 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  color: #e0e7f1;
+}
+
+
+.eventCard h3 {
+  font-size: 1.6rem;
+  margin-bottom: 12px;
+  color: #a8d0e6; 
+}
+
+.eventCard p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+
+footer {
+  margin-top: auto;
+  padding: 15px 0;
+  width: 100%;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.9rem;
+  background-color: rgba(0, 0, 0, 0.25);
+  position: relative;
+  bottom: 0;
+  left: 0;
+}

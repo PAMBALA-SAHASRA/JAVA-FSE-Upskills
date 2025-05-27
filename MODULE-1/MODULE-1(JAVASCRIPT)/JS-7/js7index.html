@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Community Event Portal - DOM Manipulation</title>
+<style>
+  body {
+    background-color: #fff8e1;
+    font-family: 'Verdana', sans-serif;
+    margin: 0; padding: 20px;
+    color: #5d4037;
+  }
+  header {
+    text-align: center;
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: #6d4c41;
+  }
+  #eventsContainer {
+    max-width: 800px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+    gap: 15px;
+  }
+  .eventCard {
+    background-color: #fff3e0;
+    border: 2px solid #bcaaa4;
+    border-radius: 10px;
+    padding: 15px 20px;
+    box-shadow: 1px 1px 8px rgba(188,170,164,0.5);
+  }
+  .eventCard h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.5rem;
+    color: #a1887f;
+  }
+  .eventCard p {
+    margin: 6px 0;
+    font-size: 1.1rem;
+  }
+  .btn {
+    background-color: #8d6e63;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+  }
+  .btn:hover {
+    background-color: #5d4037;
+  }
+</style>
+</head>
+<body>
+
+<header>Community Event Portal</header>
+<div id="eventsContainer"></div>
+
+<script src="main.js"></script>
+</body>
+</html>
